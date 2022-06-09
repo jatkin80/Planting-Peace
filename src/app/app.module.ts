@@ -8,12 +8,14 @@ import { TableDataComponent } from './table-data/table-data.component';
 import {MatTableModule} from '@angular/material/table';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MyGardenComponent } from './my-garden/my-garden.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableDataComponent,
-    NavBarComponent
+    NavBarComponent,
+    MyGardenComponent
   ],
   imports: [
     BrowserModule,
