@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "planting-peace"
+  "cli": {
+    "analytics": false
+  }
 }
