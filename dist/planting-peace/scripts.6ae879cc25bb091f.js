@@ -1,0 +1,1 @@
+let myExtObject=$(function(){$("li").click(function(t){t.preventDefault(),$("li").removeClass("active"),$(this).addClass("active")})});

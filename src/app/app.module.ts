@@ -9,13 +9,15 @@ import {MatTableModule} from '@angular/material/table';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MyGardenComponent } from './my-garden/my-garden.component';
+import { WeatherWidgetMainComponent } from './weather-widget-main/weather-widget-main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableDataComponent,
     NavBarComponent,
-    MyGardenComponent
+    MyGardenComponent,
+    WeatherWidgetMainComponent
   ],
   imports: [
     BrowserModule,

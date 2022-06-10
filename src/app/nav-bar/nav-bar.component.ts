@@ -11,6 +11,8 @@ export class NavBarComponent implements OnInit  {
   faWorm=faWorm;
   faSeedling=faSeedling;
   faReceipt=faReceipt;
+
+
   ngOnInit(): void {
 myExtObject();
   }

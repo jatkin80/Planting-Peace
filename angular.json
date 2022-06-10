@@ -33,7 +33,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["src/assets/vendors/myjs.js"]
           },
           "configurations": {
             "production": {
