@@ -1,6 +1,19 @@
-<app-nav-bar></app-nav-bar>
-<br><br><br><br>
-<app-weather-widget-main></app-weather-widget-main>
-<app-table-data></app-table-data>
+<header>
+  <h1>{{title}}</h1>
+<app-nav-bar>
+
+</app-nav-bar>
+<nav>
+<a routerLink="/dashboard">Dashboard</a>
+<a routerLink="/plants">Plants</a>
+</nav>
+<!-- <app-weather-widget-main></app-weather-widget-main> -->
+<router-outlet></router-outlet>
+</header>
+
+
+
+
+<app-messages></app-messages>
 
 

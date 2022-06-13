@@ -1,6 +1,11 @@
 export interface Plant {
+  id: number;
   name: string;
-  position: number;
-  planted: any;
-  toMaturity: number;
+type: string,
+imageurl: string,
+description: string,
+  dateadded: any;
+  notes:string;
+  daystomaturity: number;
+  spacing: number;
 }

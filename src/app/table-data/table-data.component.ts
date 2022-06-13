@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,   OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 import { Plant } from '../models/Plant';
 import { PlantService } from '../plant.service';
-
 
 
 @Component({
@@ -10,16 +12,31 @@ import { PlantService } from '../plant.service';
   styleUrls: ['./table-data.component.scss']
 })
 export class TableDataComponent implements OnInit {
-  plants: Plant[] = [];
-  displayedColumns: string[] = [ 'name', 'planted', 'toMaturity'];
+plant: Plant | undefined;
 
-  constructor(private plantService: PlantService){}
+ constructor(
+  private route: ActivatedRoute,
+  private plantService: PlantService,
+  private location: Location
+ ) { }
 
-  ngOnInit()
-{
-  this.plantService.fetchPlants().subscribe(plants=> {
-    this.plants=plants
-  })
+  ngOnInit(): void {
+    this.getPlant();
   }
-  }
+  getPlant():void {
 
+    const id=parseInt(this.route.snapshot.paramMap.get('id')!, 10);
+    this.plantService.getPlant(id)
+    .subscribe(plant=>this.plant=plant);
+
+}
+goBack():void {
+this.location.back();
+}
+save(): void {
+  if (this.plant) {
+    this.plantService.updatePlant(this.plant)
+      .subscribe(() => this.goBack());
+  }
+}
+}

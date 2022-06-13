@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PlantFormComponent } from './plant-form/plant-form.component';
+import {DashboardComponent} from './dashboard/dashboard.component'
+import { TableDataComponent } from './table-data/table-data.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {    path:'dashboard', component: DashboardComponent},
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+ {   path: 'plants', component: PlantFormComponent},
+ {path: 'detail/:id', component: TableDataComponent},
+
+
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

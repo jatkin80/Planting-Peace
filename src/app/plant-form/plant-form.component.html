@@ -1,0 +1,61 @@
+<h2>Add New Plant</h2>
+<div>
+  <label for="new-plant"> Name: </label>
+  <input id="new-plant" #plantName />
+</div>
+<div>
+  <label for="new-plant"> Type: </label>
+  <input id="new-plant" #plantType />
+</div>
+<div>
+  <label for="new-plant"> URL: </label>
+  <input id="new-plant" #plantImageUrl />
+</div>
+<div>
+  <label for="new-plant">Date Planted: </label>
+  <input id="new-plant" #plantDate />
+</div>
+<div>
+  <label for="new-plant">Days to Maturity: </label>
+  <input id="new-plant" #plantType />
+</div>
+<div>
+  <label for="new-plant">Description: </label>
+  <input id="new-plant" #plantDescription />
+</div>
+<div>
+  <label for="new-plant">Notes: </label>
+  <input id="new-plant" #plantNotes />
+</div>
+<div>
+  <label for="new-plant">Required Spacing: </label>
+  <input id="new-plant" #plantSpacing />
+</div>
+<div>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button
+    type="button"
+    class="add-button"
+    (click)="add(plantName.value); plantName.value = ''"
+  >
+    Add plant
+  </button>
+</div>
+<div>
+  <h2>Don't Add that New Plant Without Making Room!</h2>
+  <ul class="plants">
+    <li *ngFor="let plant of plants">
+      <a routerLink="/detail/{{ plant.id }}">
+        <span class="badge">{{ plant.id }}</span> {{ plant.name }}
+      </a>
+      <button
+        type="button"
+        class="delete"
+        title="delete plant"
+        (click)="delete(plant)"
+      >
+        x
+      </button>
+    </li>
+  </ul>
+</div>
