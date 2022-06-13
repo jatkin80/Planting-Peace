@@ -1,7 +1,7 @@
 <h2>Upcoming Plants</h2>
 <div class="plants-menu">
 <a *ngFor="let plant of plants"
-  routerLink="/detail{{plant.id}}">
+  routerLink="/detail/{{plant.id}}">
   {{plant.name}}
 </a>
 </div>

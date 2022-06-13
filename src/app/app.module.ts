@@ -19,6 +19,10 @@ import { TableDataComponent } from './table-data/table-data.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlantSearchComponent } from './plant-search/plant-search.component';
+import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
+
 
 
 @NgModule({
@@ -31,19 +35,25 @@ import { PlantSearchComponent } from './plant-search/plant-search.component';
 TableDataComponent,
 MessagesComponent,
 DashboardComponent,
-PlantSearchComponent
+PlantSearchComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     BrowserAnimationsModule,
     MatTableModule,
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
+    MatCardModule,
+    MatListModule,
+
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false}
+      InMemoryDataService, {dataEncapsulation: false},
+
+
     )
   ],
   providers: [],

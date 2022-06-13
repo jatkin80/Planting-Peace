@@ -1,40 +1,17 @@
 <div *ngIf="plant">
 
-  <h2>{{plant.name | uppercase}} Details</h2>
-  <div><span>ID: </span>{{plant.id}}</div>
-  <div>
-    <label for="plant-name">Plant name: </label>
-    <input id="plant-name" [(ngModel)]="plant.name" placeholder="Plant name"/>
-  </div>
-  <div>
-    <label for="plant-type">Type: </label>
-    <input id="plant-type" [(ngModel)]="plant.type" placeholder="Plant type"/>
- </div>
- <div>
-    <label for="plant-image">Image URL: </label>
-    <input id="plant-image" [(ngModel)]="plant.imageurl" placeholder="Plant image"/>
-  </div>
-  <div>
-    <label for="plant-date">Date Planted: </label>
-    <input id="plant-date" [(ngModel)]="plant.dateadded" placeholder="plant-date"/>
-  </div>
-  <div>
-    <label for="plant-maturity">Days To Maturity: </label>
-    <input id="plant-maturity" [(ngModel)]="plant.daystomaturity" placeholder="plant-maturity"/>
-  </div>
-  <div>
-    <label for="plant-description">Description: </label>
-    <input id="plant-description" [(ngModel)]="plant.description" placeholder="Plant description"/>
-  </div>
-  <div>
-    <label for="plant-notes">Notes: </label>
-    <input id="plant-notes" [(ngModel)]="plant.notes" placeholder="plant-notes"/>
-  </div>
-  <div>
-    <label for="plant-spacing">Required Spacing (in inches): </label>
-    <input id="plant-spacing" [(ngModel)]="plant.spacing" placeholder="Plant spacing"/>
-  </div>
-  <button type="button" (click)="goBack()">go back</button>
-  <button type="button" (click)="save()">save</button>
-</div>
+      <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{plant.name}}</mat-card-title>
+        <mat-card-subtitle>{{plant.type}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <img mat-card-image src="{{plant.imageUrl}}"
+        alt="{{plant.name}}"/>
+
+<mat-card-content>
+       <p> {{plant.description}} </p>
+      </mat-card-content>
+    </mat-card>
+
 

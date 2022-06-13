@@ -1,9 +1,32 @@
-<!-- <h2>My Garden</h2>
-<ul class="plants">
-  <li>
-    <button type="button">
-      <span class="name">{{plants.name}}</span>
-      <span class="dateadded">{{plants.dateadded}}</span>
-    </button>
-  </li>
-</ul> -->>
+ <h2>My Garden</h2>
+
+<mat-list role="plant list">
+
+  <mat-list>
+
+    <mat-list-item *ngFor="let plant of plants">
+      <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{plant.name}}</mat-card-title>
+        <mat-card-subtitle>{{plant.type}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <img mat-card-image src="{{plant.imageUrl}}"
+        alt="{{plant.name}}"/>
+
+<mat-card-content>
+       <p> {{plant.description}} </p>
+      </mat-card-content>
+    </mat-card>
+    </mat-list-item>
+
+ </mat-list>
+
+  <!-- <li *ngFor="let plant of plants">
+    <a routerLink="/plants">
+      <span class="badge">{{ plant.id }}</span> {{ plant.name }}
+      <span class="badge">{{ plant.id }}</span> {{ plant.type }}
+    </a> -->
+
+  </mat-list>
+

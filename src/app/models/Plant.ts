@@ -2,7 +2,7 @@ export interface Plant {
   id: number;
   name: string;
 type: string,
-imageurl: string,
+imageUrl: string,
 description: string,
   dateadded: any;
   notes:string;
