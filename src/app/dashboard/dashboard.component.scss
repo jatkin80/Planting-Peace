@@ -1,0 +1,71 @@
+header > img {
+flex-basis: 20%;
+margin-top: 0;
+
+text-align: left;
+margin-left: 0;
+max-width: 400px;
+}
+header {
+display: inline-flex;
+justify-content: flex-start;
+margin-left: 0;
+}
+body {
+
+color:#333A33;
+main {
+display: flex;
+flex-wrap: wrap;
+
+  font-size: 24px;
+
+
+width: 100%;
+}
+}
+#weather {
+  margin-top: 3%;
+
+}
+
+
+
+
+a {
+text-decoration: none;
+color: inherit;
+font-size: 24px;
+}
+
+.plants-menu {
+display: flex;
+width: 40%;
+flex-direction: column;
+flex-wrap: wrap;
+
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

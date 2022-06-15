@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
 #divWeatherMain{
   display: block;
   border-radius: 10px;
@@ -7,8 +7,7 @@
   background: #333A33;
   background: linear-gradient(180deg, #333A33 0%, #515751 75%, #716671 100%);
   color:  #f5f4ee;
-  font-family: 'Forum', cursive;
-    margin-left: 40px;
+
 
 }
 
@@ -32,7 +31,7 @@
 }
 
 .cloudDiv{
-  margin-top: -45px;
+  margin-top: -35px;
 }
 
 .cloud{
@@ -54,25 +53,26 @@
 .weatherWidgetRowOne{
  padding-left: 40%;
   font-size: 32px;
-  margin-top: 5px;
+  margin-top: 8px;
   align-self: center;
 }
 .weatherWidgetRowTwo{
  padding-left: 35%;
  margin-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
 }
 .weatherWidgetRowThree{
-padding-left: 28%;
-  font-size: 14px;
+padding-left: 25%;
+  font-size: 16px;
+
 }
 .weatherWidgetRowFour{
- padding-left: 22%;
+ padding-left: 23%;
   font-size: 25px;
   margin-top: 10px;
 }
 .weatherWidgetRowFive{
-padding-left: 28%;
+padding-left: 23%;
 padding-top: 5px;
-  font-size: 14px;
+  font-size: 18px;
 }

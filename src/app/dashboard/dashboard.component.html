@@ -1,9 +1,26 @@
-<h2>Upcoming Plants</h2>
-<div class="plants-menu">
+<body>
+  <header>
+<img src="https://i.postimg.cc/NjqGcvn8/Planting-Peace3.jpg">
+<div id="weather">
+  <app-weather-widget-main></app-weather-widget-main>
+  </div>
+  </header>
+<main>
+
+
+  <div class="plants-menu">
+<h2>Maturing Soon</h2>
+
 <a *ngFor="let plant of plants"
-  routerLink="/detail/{{plant.id}}">
+  routerLink="/detail/{{plant.id}}"><span class="material-icons">
+  filter_vintage</span>
+
   {{plant.name}}
+
 </a>
 </div>
 
-<app-plant-search></app-plant-search>
+</main>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+</body>

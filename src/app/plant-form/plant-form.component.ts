@@ -22,7 +22,7 @@ getPlants():void {
 this.plantService.getPlants()
 .subscribe(plants=>this.plants=plants);
 }
-add(name: string): void {
+addPlant(name: string): void {
   name = name.trim();
   if (!name) { return; }
   this.plantService.addPlant({ name } as Plant)

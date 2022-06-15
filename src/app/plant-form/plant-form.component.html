@@ -1,61 +1,65 @@
-<h2>Add New Plant</h2>
-<div>
-  <label for="new-plant"> Name: </label>
+<div id="add-new">
+<img src="https://i.postimg.cc/D0LydKnv/addnew.png">
+<form class="new-plant-form" #plantForm="ngForm" (ngSubmit)="addPlant(plantForm.value)">
+  <label for="name"> Name: </label>
   <input id="new-plant" #plantName />
-</div>
-<div>
-  <label for="new-plant"> Type: </label>
-  <input id="new-plant" #plantType />
-</div>
-<div>
-  <label for="new-plant"> URL: </label>
-  <input id="new-plant" #plantImageUrl />
-</div>
-<div>
-  <label for="new-plant">Date Planted: </label>
-  <input id="new-plant" #plantDate />
-</div>
-<div>
-  <label for="new-plant">Days to Maturity: </label>
-  <input id="new-plant" #plantType />
-</div>
-<div>
-  <label for="new-plant">Description: </label>
-  <input id="new-plant" #plantDescription />
-</div>
-<div>
-  <label for="new-plant">Notes: </label>
-  <input id="new-plant" #plantNotes />
-</div>
-<div>
-  <label for="new-plant">Required Spacing: </label>
-  <input id="new-plant" #plantSpacing />
-</div>
-<div>
-  <!-- (click) passes input value to add() and then clears the input -->
+
+
+  <label for="type"> Type: </label>
+  <input id="type" #plantType />
+
+
+  <label for="imageUrl"> URL: </label>
+  <input id="imageUrl" #plantImageUrl />
+
+
+  <label for="dateadded">Date Planted: </label>
+  <input id="dateadded" type="date" #plantDate />
+
+
+  <label for="daystomaturity">Days to Maturity: </label>
+  <input id="daystomaturity" #plantType />
+
+
+  <label for="description">Description: </label>
+  <textarea id="description" #plantDescription></textarea>
+
+
+  <label for="notes">Notes: </label>
+  <textarea id="notes" #plantNotes></textarea>
+
+
+  <label for="spacing">Required Spacing: </label>
+  <input id="spacing" #plantSpacing />
+
+<div id="button">
   <button
     type="button"
     class="add-button"
-    (click)="add(plantName.value); plantName.value = ''"
-  >
+    (click)="addPlant(plantName.value); plantName.value = ''">
     Add plant
   </button>
 </div>
-<div>
-  <h2>Don't Add that New Plant Without Making Room!</h2>
+</form>
+</div>
+<div id="delete-plant">
+<img src="https://i.postimg.cc/Y2f5g9w4/deleteplant.png" alt="">
+<div id="list">
   <ul class="plants">
     <li *ngFor="let plant of plants">
       <a routerLink="/detail/{{ plant.id }}">
-        <span class="badge">{{ plant.id }}</span> {{ plant.name }}
+        <span class="badge">{{ plant.name }}</span><img src="{{plant.imageUrl}}"/>
       </a>
+
       <button
-        type="button"
-        class="delete"
-        title="delete plant"
-        (click)="delete(plant)"
-      >
-        x
+      class="delete"
+      title="delete plant">
+        <span class="material-icons" (click)="delete(plant)">delete</span>
+
       </button>
+
     </li>
   </ul>
 </div>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">

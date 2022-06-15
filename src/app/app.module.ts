@@ -22,7 +22,9 @@ import { PlantSearchComponent } from './plant-search/plant-search.component';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -49,6 +51,9 @@ PlantSearchComponent,
     FormsModule,
     MatCardModule,
     MatListModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatIconModule,
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false},

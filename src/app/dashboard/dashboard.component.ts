@@ -8,6 +8,7 @@ import { PlantService } from '../plant.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  title= "Planting Peace";
 plants: Plant[]=[];
   constructor(private plantService:PlantService) { }
 
@@ -16,6 +17,6 @@ plants: Plant[]=[];
   }
 getPlants(): void {
 this.plantService.getPlants()
-.subscribe(plants => this.plants=plants.slice(1,5));
+.subscribe(plants => this.plants=plants);
 }
 }

@@ -120,22 +120,4 @@ export class PlantService {
 
 
 }
-// constructor(private http: HttpClient){}
 
-// fetchPlants(){
-
-// return this.http.get<PlantsResponse>(plantsEndpoint)
-// }
-
-// export const PLANTS:  Plant[] = [
-//   {id: 1, name: 'Tomato', dateadded: '4-2-2022', daystomaturity: 30},
-//   {id: 2, name: 'Basil', dateadded: '4-12-2022', daystomaturity: 20},
-//   {id: 3, name: 'Okra', dateadded: '4-7-2022', daystomaturity: 45},
-//   {id: 4, name: 'Spaghetti Squash', dateadded: '4-6-2022', daystomaturity: 32},
-//   {id: 5, name: 'Pumpkin', dateadded: '4-3-2022', daystomaturity: 23},
-//   {id: 6, name: 'Cucumber', dateadded: '4-9-2022', daystomaturity: 4},
-//   {id: 7, name: 'Bell Pepper', dateadded: '5-2-2022', daystomaturity: 8},
-//   {id: 8, name: 'Strawberry', dateadded: '4-19-2022', daystomaturity: 19},
-//   {id: 9, name: 'Mint', dateadded: '4-1-2022', daystomaturity: 0},
-//   {id: 10, name: 'Jalapeno', dateadded: '4-29-2022', daystomaturity: 341},
-// ];
