@@ -1,60 +1,69 @@
-*{
-  color: #333a33;
- font-size: 24px;
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
+* {
   font-family: "Forum", cursive;
-}
-
-#search-box {
-  min-height: 50px;
-  background: #fefefd;
-;
-  }
-
- input {
-  display: block;
-  width: 100%;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  border: 1px, solid, #333A33;
-  padding: 5%;
-  margin-top: 8px;
+  font-size: 24px;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+color:  #333A33;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
 
 }
 
-label {
-text-align: center;
-margin-left: 2%;
+#delete-plant>img{
+max-width: 800px;
+align-self: center;
 }
+
+#list {
+flex-basis: 50%;
+align-self: center;
+}
+ul>li {
+max-width:400px;
+}
+
+
+#button {
+  text-align: center;
+}
+
+
+
 ul {
 
   list-style-type: none;
-li{
-text-decoration: none;
-a {
-  text-decoration: none;
-  color: inherit;
-  margin: 10px 0px;
-  text-decoration: none;
 
-}}
-}
-img{
-max-width: 50%;
-text-align: center;
-}
+  li {
+    text-decoration: none;
 
+
+
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    margin: 10px 0px;
+
+  }
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
+display: block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  text-align: center;
+margin: 10px;
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;

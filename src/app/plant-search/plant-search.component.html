@@ -1,12 +1,16 @@
 <div id="search-component">
-  <label for="search-box">Search Plants</label>
+  <label for="search-box"><img src="https://i.postimg.cc/QdpwwHvD/searchplants.jpg alt="></label>
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
   <ul class="search-result">
     <li *ngFor="let plant of plants$ | async" >
-      <a routerLink="/detail/{{plant.id}}">
+      <a routerLink="/detail/{{plant.id}}"><span class="material-icons">
+        filter_vintage</span>
+
         {{plant.name}}
       </a>
     </li>
   </ul>
 </div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">

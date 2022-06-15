@@ -1,15 +1,22 @@
-header > img {
-flex-basis: 20%;
-margin-top: 0;
-
-text-align: left;
-margin-left: 0;
-max-width: 400px;
-}
 header {
-display: inline-flex;
-justify-content: flex-start;
-margin-left: 0;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  padding-top: 1.5%;
+  margin-top: 1%;
+ img {
+width:40%;
+text-align: center;
+}
+
+#weather {
+
+  margin-left: 5%;
+  width:fit-content;
+  align-self: center;
+}
+
 }
 body {
 
@@ -24,27 +31,31 @@ flex-wrap: wrap;
 width: 100%;
 }
 }
-#weather {
-  margin-top: 3%;
-
-}
-
-
-
 
 a {
-text-decoration: none;
-color: inherit;
-font-size: 24px;
-}
+  text-decoration: none;
+  color: inherit;
+  font-size: 34px;
+  padding-bottom: 24px;
+  }
 
 .plants-menu {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 2%;
 display: flex;
-width: 40%;
+width: 50%;
 flex-direction: column;
 flex-wrap: wrap;
-
+justify-content: center;
+align-items: center;
+img {
+  width: 60%;
 }
+}
+
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;

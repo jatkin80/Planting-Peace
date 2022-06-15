@@ -1,17 +1,25 @@
 <div *ngIf="plant">
-
-      <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>{{plant.name}}</mat-card-title>
-        <mat-card-subtitle>{{plant.type}}</mat-card-subtitle>
-        </mat-card-header>
-
-        <img mat-card-image src="{{plant.imageUrl}}"
-        alt="{{plant.name}}"/>
-
-<mat-card-content>
-       <p> {{plant.description}} </p>
-      </mat-card-content>
-    </mat-card>
-
-
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ plant.name | uppercase }} Details</mat-card-title>
+      <mat-card-subtitle> Planted: {{ plant.dateadded }} </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ plant.imageUrl }}" alt="{{ plant.name }}" />
+    <mat-card-content>
+      <p>{{ plant.description }}</p>
+    </mat-card-content>
+    <div>
+      <div><span>id: </span>{{ plant.id }}</div>
+      <label for="name"> Name: </label>
+      <input
+        id="plant-name"
+        [(ngModel)]="plant.name"
+        placeholder="Plant name"
+      />
+    </div>
+    <mat-card-actions>
+      <button type="button" (click)="goBack()">go back</button>
+      <button type="button" (click)="save()">save</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

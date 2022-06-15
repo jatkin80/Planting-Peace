@@ -1,0 +1,71 @@
+
+* {
+  font-family: "Forum", cursive;
+  font-size: 24px;
+}
+.new-plant-form{
+display: flex;
+margin-top: 5%;
+justify-content: space-between;
+img{
+  align-self: flex-start;
+max-width: 600px;
+
+flex-basis: 20%;
+  }}
+
+
+.plantForm {
+width: 60%;
+  margin-top: 3%;
+font-size: 20px;
+display: block;
+padding-left: 2%;
+
+}
+
+
+textarea {
+  min-height: 100px;
+}
+
+.add-button {
+  background-color: hsl(33, 2, 68);
+  border: none;
+  box-shadow: 2px 2px 2px hsl(33, 0, 68);
+  font-size: 22px;
+  width: 200px;
+
+}
+button {
+  align-self: flex-start;
+  text-align: center;
+}
+
+
+
+ul {
+text-align: center;
+font-size: 30px;
+  list-style-type: none;
+
+  li {
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 1.2;
+
+
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    margin: 10px 0px;
+    font-size: 30px;
+  }
+}
+.badge {
+  align-self: center;
+  margin: 20%,20px;
+ display: block;
+
+}

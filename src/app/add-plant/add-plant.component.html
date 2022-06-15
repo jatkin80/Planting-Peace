@@ -1,0 +1,58 @@
+<div class="new-plant-form">
+  <img src="https://i.postimg.cc/D0LydKnv/addnew.png">
+
+    <form #plantForm="ngForm" class="plantForm" (ngSubmit)="addPlant()">
+      <label for="id"> ID: </label>
+      <input id="id"  [(ngModel)]="id" name="id">
+
+    <label for="name"> Name: </label>
+    <input id="name"  [(ngModel)]="name" name="name">
+
+
+    <label for="type"> Type: </label>
+    <input id="type"[(ngModel)]="type" name="type">
+
+
+    <label for="imageUrl"> URL: </label>
+    <input id="imageUrl" [(ngModel)]="imageUrl" name="imageUrl">
+
+
+    <label for="dateadded">Date Planted: </label>
+    <input id="dateadded" type="date"[(ngModel)]="dateadded" name="dateadded">
+
+
+    <label for="daystomaturity">Days to Maturity: </label>
+    <input id="daystomaturity" [(ngModel)]="daystomaturity" name="daystomaturity">
+
+
+    <label for="description">Description: </label>
+    <textarea id="description" [(ngModel)]="description" name="description"></textarea>
+
+
+    <label for="notes">Notes: </label>
+    <textarea id="notes"[(ngModel)]="notes" name="notes"></textarea>
+
+
+    <label for="spacing">Required Spacing: </label>
+    <input id="spacing" [(ngModel)]="spacing" name="spacing">
+
+    <div id="button">
+    <button
+      type="submit"
+      class="add-button">
+      Add plant
+    </button>
+  </div>
+  </form>
+
+  </div>
+<br>
+<div class="plants">
+    <ul class="plants">
+      <li *ngFor="let plant of plants">
+        <a routerLink="/detail/{{ plant.id }}">
+          <span class="badge">{{ plant.name  }} Planted on: {{plant.dateadded}}</span>
+        </a>
+</li>
+</ul>
+</div>

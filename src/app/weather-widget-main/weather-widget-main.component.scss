@@ -2,8 +2,8 @@
 #divWeatherMain{
   display: block;
   border-radius: 10px;
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 325px;
   background: #333A33;
   background: linear-gradient(180deg, #333A33 0%, #515751 75%, #716671 100%);
   color:  #f5f4ee;
@@ -16,22 +16,23 @@
   margin:0 auto;
   width: fit-content;
   justify-content: center;
+  align-items: center;
 }
 
 .sun{
-  margin-top: 10px;
+  margin-top: 25px;
   color: rgb(246, 254, 4);
   filter: drop-shadow( 1px 1px 10px rgb(246, 254, 4));
 }
 
 .moon{
-  margin-top: 10px;
+  margin-top: 15px;
   color: rgb(248, 252, 250);
   filter: drop-shadow( 1px 1px 10px rgb(248, 252, 250));
 }
 
 .cloudDiv{
-  margin-top: -35px;
+  margin-top: -33px;
 }
 
 .cloud{
@@ -51,28 +52,30 @@
 
 
 .weatherWidgetRowOne{
- padding-left: 40%;
-  font-size: 32px;
-  margin-top: 8px;
-  align-self: center;
+
+  font-size: 36px;
+  margin-top: 15px;
+ text-align: center;
 }
 .weatherWidgetRowTwo{
- padding-left: 35%;
- margin-top: 5px;
-  font-size: 18px;
+
+ margin-top: 15px;
+  font-size: 22px;
+  text-align: center;
 }
 .weatherWidgetRowThree{
-padding-left: 25%;
-  font-size: 16px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 12px;
 
 }
 .weatherWidgetRowFour{
- padding-left: 23%;
-  font-size: 25px;
+  text-align: center;
+  font-size: 28px;
   margin-top: 10px;
 }
 .weatherWidgetRowFive{
-padding-left: 23%;
-padding-top: 5px;
+  text-align: center;
+padding-top: 8px;
   font-size: 18px;
 }

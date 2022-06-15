@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http'
 
+
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
@@ -25,6 +26,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { DeletePlantsComponent } from './delete-plants/delete-plants.component';
+import { AddPlantComponent } from './add-plant/add-plant.component';
+
 
 
 @NgModule({
@@ -38,6 +42,8 @@ TableDataComponent,
 MessagesComponent,
 DashboardComponent,
 PlantSearchComponent,
+DeletePlantsComponent,
+AddPlantComponent,
 
   ],
   imports: [
@@ -54,6 +60,7 @@ PlantSearchComponent,
     MatDatepickerModule,
     MatFormFieldModule,
     MatIconModule,
+
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false},

@@ -1,0 +1,21 @@
+<div id="delete-plant">
+  <img src="https://i.postimg.cc/hGHYLvnN/edit.png" alt="">
+  <div id="list">
+    <ul class="plants">
+      <li *ngFor="let plant of plants">
+        <a routerLink="/detail/{{ plant.id }}">
+          <span class="badge">{{ plant.name }}</span><img src="{{plant.imageUrl}}"/>
+        </a>
+
+        <button
+        class="delete"
+        title="delete plant">
+          <span class="material-icons" (click)="delete(plant)">delete</span>
+
+        </button>
+
+      </li>
+    </ul>
+  </div>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
