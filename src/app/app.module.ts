@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import{HttpClientModule} from '@angular/common/http'
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -10,7 +9,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MyGardenComponent } from './my-garden/my-garden.component';
@@ -28,8 +27,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { DeletePlantsComponent } from './delete-plants/delete-plants.component';
 import { AddPlantComponent } from './add-plant/add-plant.component';
-
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +36,13 @@ import { AddPlantComponent } from './add-plant/add-plant.component';
     MyGardenComponent,
     WeatherWidgetMainComponent,
     PlantFormComponent,
-TableDataComponent,
-MessagesComponent,
-DashboardComponent,
-PlantSearchComponent,
-DeletePlantsComponent,
-AddPlantComponent,
-
+    TableDataComponent,
+    MessagesComponent,
+    DashboardComponent,
+    PlantSearchComponent,
+    DeletePlantsComponent,
+    AddPlantComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,14 +59,11 @@ AddPlantComponent,
     MatFormFieldModule,
     MatIconModule,
 
-
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false},
-
-
-    )
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

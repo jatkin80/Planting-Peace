@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faSun, faCloud, faMoon } from '@fortawesome/free-solid-svg-icons';
-import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-weather-widget-main',
