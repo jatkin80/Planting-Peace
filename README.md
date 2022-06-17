@@ -2,16 +2,14 @@
 
 A full-stack CRUD application for keeping track of garden plants.
 
-## Deployed Site
+## Deployments
 
 [Website](https://planting-peace.netlify.app/dashboard)
 
-## Deployed Backend
-
-[Deployed Backend](https://planting-peace-api.herokuapp.com/plants)
+[Backend](https://planting-peace-api.herokuapp.com/plants)
 
 ## Screenshots
 
-[![webpage.jpg](https://i.postimg.cc/N099QfL0/webpage.jpg)](https://postimg.cc/t1bC5b30)
+[![webpage.jpg](https://i.postimg.cc/YqDQ7P8b/webpage.jpg)](https://postimg.cc/KRL1rJ6M)
 
 
