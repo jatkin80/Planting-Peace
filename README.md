@@ -4,7 +4,7 @@ A full-stack CRUD application for keeping track of garden plants.
 
 ## Deployed Site
 
-[Website] (https://planting-peace.netlify.app/dashboard)
+[Website](https://planting-peace.netlify.app/dashboard)
 
 ## Deployed Backend
 
