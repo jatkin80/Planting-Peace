@@ -9,6 +9,14 @@ header {
 width:40%;
 text-align: center;
 }
+@media only screen and (max-width: 600px) {
+  header {
+    display: inline-block;
+
+    width: 90%;
+
+  }
+}
 
 #weather {
 
@@ -16,6 +24,7 @@ text-align: center;
   width:fit-content;
   align-self: center;
 }
+@media only screen and (max-width: 600px) {}
 
 }
 body {
@@ -24,13 +33,20 @@ color:#333A33;
 main {
 display: flex;
 flex-wrap: wrap;
-
-  font-size: 24px;
-
-
 width: 100%;
-}
-}
+  font-size: 24px;
+}}
+  @media only screen and (max-width: 600px) {
+    main {
+      display: flex;
+      flex-wrap: wrap;
+
+        font-size: 14px;
+      }
+  }
+
+
+
 
 a {
   text-decoration: none;
@@ -38,7 +54,14 @@ a {
   font-size: 34px;
   padding-bottom: 24px;
   }
-
+  @media only screen and (max-width: 600px) {
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 12px;
+      padding-bottom: 14px;
+      }
+  }
 .plants-menu {
   display: flex;
   flex-direction: column;
@@ -54,8 +77,6 @@ img {
   width: 40%;
 }
 }
-
-
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -79,4 +100,30 @@ img {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
+@media only screen and (max-width: 600px) {
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
 }

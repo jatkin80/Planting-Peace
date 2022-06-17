@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'editplants', component: DeletePlantsComponent },
   { path: 'mygarden', component: MyGardenComponent },
   { path: '**', component: PageNotFoundComponent },
+
 ];
 
 @NgModule({

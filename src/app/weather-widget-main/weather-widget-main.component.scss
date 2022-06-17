@@ -2,15 +2,26 @@
 #divWeatherMain{
   display: block;
   border-radius: 10px;
-  width: 250px;
-  height: 325px;
+  width: 225px;
+  height: 300px;
   background: #333A33;
   background: linear-gradient(180deg, #333A33 0%, #515751 75%, #716671 100%);
   color:  #f5f4ee;
 
 
 }
+@media only screen and (max-width: 600px) {
+  #divWeatherMain{
+    display: block;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background: #333A33;
+    background: linear-gradient(180deg, #333A33 0%, #515751 75%, #716671 100%);
+    color:  #f5f4ee;
 
+
+  }}
 .weatherWidgetRow{
   display:flex;
   margin:0 auto;
@@ -24,11 +35,21 @@
   color: rgb(246, 254, 4);
   filter: drop-shadow( 1px 1px 10px rgb(246, 254, 4));
 }
+@media only screen and (max-width: 600px) {
+  .sun{
+ display: none;
+  }
+}
 
 .moon{
   margin-top: 15px;
   color: rgb(248, 252, 250);
   filter: drop-shadow( 1px 1px 10px rgb(248, 252, 250));
+}
+@media only screen and (max-width: 600px) {
+  .moon{
+display: none;
+  }
 }
 
 .cloudDiv{
@@ -44,9 +65,14 @@
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
+@media only screen and (max-width: 600px) {
+  .cloud{
+display: none;
+  }
+}
 
 @keyframes cloudMovement{
-  from{margin-left: -55px;}
+  from{margin-left: -20px;}
   to{margin-left: 65px;}
 }
 
@@ -57,11 +83,28 @@
   margin-top: 15px;
  text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .weatherWidgetRowOne{
+
+    font-size: 16px;
+    margin-top: 6px;
+   text-align: center;
+  }
+}
 .weatherWidgetRowTwo{
 
  margin-top: 15px;
   font-size: 22px;
   text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .weatherWidgetRowTwo{
+
+    margin-top: 10px;
+     font-size: 10px;
+     text-align: center;
+   }
 }
 .weatherWidgetRowThree{
   text-align: center;
@@ -69,13 +112,35 @@
   margin-top: 12px;
 
 }
+@media only screen and (max-width: 600px) {
+  .weatherWidgetRowThree{
+    text-align: center;
+    font-size: 8px;
+    margin-top: 8px;
+
+  }
+}
 .weatherWidgetRowFour{
   text-align: center;
   font-size: 28px;
   margin-top: 10px;
 }
+@media only screen and (max-width: 600px) {
+  .weatherWidgetRowFour{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
 .weatherWidgetRowFive{
   text-align: center;
 padding-top: 8px;
   font-size: 18px;
+}
+@media only screen and (max-width: 600px) {
+  .weatherWidgetRowFive{
+    text-align: center;
+  padding-top: 6px;
+    font-size: 8px;
+  }
 }
