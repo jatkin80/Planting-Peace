@@ -22,23 +22,28 @@ export class AddPlantComponent implements OnInit {
 
   constructor(private plantService: PlantService){}
   ngOnInit(): void {
+this.getPlants();
+  }
+  getPlants():void {
+    this.plantService.getPlants().subscribe(plants=>this.plants=plants);
+    }
+    addPlant() {
 
+      const plant={
+        id: this.id,
+        name:this.name,
+        type:this.type,
+        imageUrl:this.imageUrl,
+        dateadded:this.dateadded,
+        daystomaturity:this.daystomaturity,
+        description:this.description,
+        notes:this.notes,
+        spacing:this.spacing
+      }
+
+    this.plantService.addPlant(plant).subscribe(plant=>{
+      this.plants.push(plant);
+    });
   }
 
-  addPlant() {
-    const plant={
-      id: this.id,
-      name:this.name,
-      type:this.type,
-      imageUrl:this.imageUrl,
-      dateadded:this.dateadded,
-      daystomaturity:this.daystomaturity,
-      description:this.description,
-      notes:this.notes,
-      spacing:this.spacing
-    }
-
-  this.plantService.addPlant(plant);
-}
-
-}
+  }
