@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessagesComponent } from '../messages/messages.component';
-import { Plant } from '../models/Plant';
+import { Plant, PlantResponse, PlantsResponse } from '../models/Plant';
 import { PlantService } from '../plant.service';
 @Component({
   selector: 'app-add-plant',
@@ -22,14 +22,10 @@ export class AddPlantComponent implements OnInit {
 
   constructor(private plantService: PlantService){}
   ngOnInit(): void {
-this.getPlants();
 
   }
-  getPlants():void {
-  this.plantService.getPlants().subscribe(plants=>this.plants=plants);
-  }
+
   addPlant() {
-
     const plant={
       id: this.id,
       name:this.name,
@@ -42,10 +38,7 @@ this.getPlants();
       spacing:this.spacing
     }
 
-  this.plantService.addPlant(plant).subscribe(plant=>{
-    this.plants.push(plant);
-  });
+  this.plantService.addPlant(plant);
 }
 
 }
-

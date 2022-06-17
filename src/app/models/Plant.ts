@@ -9,3 +9,13 @@ description: string,
   daystomaturity: number;
   spacing: number;
 }
+export interface PlantsResponse{
+  plants:Plant[];
+  }
+
+  export interface PlantResponse{
+  plant:Plant;
+  }
+export interface IPResponse {
+    ip: string;
+  }
