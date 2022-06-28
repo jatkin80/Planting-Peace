@@ -13,8 +13,9 @@ import { PlantService } from '../plant.service';
   styleUrls: ['./plant-search.component.scss']
 })
 export class PlantSearchComponent implements OnInit {
-  plants$!: Observable<Plant[]>;
+  plants$: any;
   private searchTerms = new Subject<string>();
+
   constructor(private plantService: PlantService) { }
   search(term: string): void {
     this.searchTerms.next(term);

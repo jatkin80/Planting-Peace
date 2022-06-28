@@ -11,15 +11,25 @@
   <div class="plants-menu">
 <img src="https://i.postimg.cc/CxFsM5zS/currentplants.jpg"/>
 
-<a *ngFor="let plant of plants"
-  routerLink="/detail/{{plant.id}}"><span class="material-icons">
-  filter_vintage</span>
+<div *ngIf="selectedPlant">
+  <br/>
+  <h4>{{selectedPlant.name}}</h4>
+<p>{{selectedPlant.description}}</p>
+<br/>
+</div>
 
-  {{plant.name}}
+  <div *ngFor="let plant of plants">
 
-</a>
+<p (click)="onSelect(plant)">
+    {{plant.name}}
+  </p>
+  <a [routerLink]="['/plants', plant.id]">View</a>
+  </div>
+<a [routerLink]="['/plants']"></a>
 
 </div>
+
+
 
 </main>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"

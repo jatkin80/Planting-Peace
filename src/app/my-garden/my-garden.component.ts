@@ -14,11 +14,8 @@ export class MyGardenComponent implements OnInit {
 
   constructor(private plantService: PlantService) {}
   ngOnInit(): void {
-    this.getPlants();
-  }
-  getPlants():void {
-  this.plantService.getPlants()
-  .subscribe(plants=>this.plants=plants);
+
+
   }
 }
 

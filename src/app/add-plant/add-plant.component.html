@@ -1,9 +1,9 @@
 <div class="new-plant-form">
   <img src="https://i.postimg.cc/D0LydKnv/addnew.png" />
 
-  <form #plantForm="ngForm" class="plantForm" (ngSubmit)="addPlant()">
-    <label for="id"> ID: </label>
-    <input id="id" [(ngModel)]="id" name="id" />
+  <form #plantForm="ngForm" class="plantForm" (ngSubmit)="addPlant(plantForm.value)">
+
+    <!-- <input type="hidden" id="id" [(ngModel)]="id" name="id" /> -->
 
     <label for="name"> Name: </label>
     <input id="name" [(ngModel)]="name" name="name" />
@@ -14,12 +14,12 @@
     <label for="imageUrl"> URL: </label>
     <input id="imageUrl" [(ngModel)]="imageUrl" name="imageUrl" />
 
-    <label for="dateadded">Date Planted: </label>
+    <label for="date">Date Planted: </label>
     <input
-      id="dateadded"
-      type="date"
-      [(ngModel)]="dateadded"
-      name="dateadded"
+      id="date"
+      type="text"
+      [(ngModel)]="date"
+      name="date"
     />
 
     <label for="daystomaturity">Days to Maturity: </label>
@@ -43,7 +43,7 @@
     <input id="spacing" [(ngModel)]="spacing" name="spacing" />
 
     <div id="button">
-      <button type="submit" class="add-button">Add plant</button>
+      <input type="submit" id="submit" value="Add Plant"/>
     </div>
   </form>
 </div>
@@ -53,7 +53,7 @@
     <li *ngFor="let plant of plants">
       <a routerLink="/detail/{{ plant.id }}">
         <span class="badge"
-          >{{ plant.name }} Planted on: {{ plant.dateadded }}</span
+          >{{ plant.name }} Planted on: {{ plant.date}}</span
         >
       </a>
     </li>

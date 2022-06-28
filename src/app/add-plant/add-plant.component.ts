@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MessagesComponent } from '../messages/messages.component';
 import { Plant, PlantResponse, PlantsResponse } from '../models/Plant';
 import { PlantService } from '../plant.service';
+;
 @Component({
   selector: 'app-add-plant',
   templateUrl: './add-plant.component.html',
@@ -9,41 +10,28 @@ import { PlantService } from '../plant.service';
 })
 export class AddPlantComponent implements OnInit {
   plants: Plant[]=[];
-  id!:number;
-  name!:string;
-  spacing!:number;
-  notes!:string;
-  description!:string;
-  daystomaturity!:number;
-  dateadded!:string;
-  imageUrl!:string;
-  type!:string;
+  @Input()  name!: string;
+  @Input()  description!: string;
+  @Input()  imageUrl!:string;
+  @Input() date!:string;
+  @Input() type!:string;
+  @Input() notes!:string;
+  @Input() daystomaturity!: number;
+  @Input()spacing!: number;
 
 
   constructor(private plantService: PlantService){}
-  ngOnInit(): void {
-this.getPlants();
-  }
-  getPlants():void {
-    this.plantService.getPlants().subscribe(plants=>this.plants=plants);
+  ngOnInit() {
+this.plantService.getPlants().subscribe(response=>
+      {this.plants=response.plants
+      });
     }
-    addPlant() {
+    addPlant(newPlant:Plant) {
+this.plantService.addPlant(newPlant).subscribe(response=>{
+  this.plants=[response.plant, ...this.plants]
+  console.log(newPlant);
+    })
 
-      const plant={
-        id: this.id,
-        name:this.name,
-        type:this.type,
-        imageUrl:this.imageUrl,
-        dateadded:this.dateadded,
-        daystomaturity:this.daystomaturity,
-        description:this.description,
-        notes:this.notes,
-        spacing:this.spacing
-      }
-
-    this.plantService.addPlant(plant).subscribe(plant=>{
-      this.plants.push(plant);
-    });
   }
 
   }

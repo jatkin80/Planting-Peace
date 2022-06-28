@@ -15,7 +15,7 @@ export class DeletePlantsComponent implements OnInit {  plants: Plant[]=[];
 
   }
   getPlants():void {
-    this.plantService.getPlants().subscribe(plants=>this.plants=plants);
+
     }
 
     delete(plant: Plant): void {

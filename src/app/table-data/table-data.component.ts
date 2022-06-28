@@ -27,7 +27,7 @@ plant: Plant | undefined;
 
     const id=parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.plantService.getPlant(id)
-    .subscribe(plant=>this.plant=plant);
+    .subscribe();
 
 }
 goBack():void {
