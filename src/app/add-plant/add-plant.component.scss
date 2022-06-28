@@ -29,7 +29,7 @@ textarea {
   min-height: 100px;
 }
 
-.add-button {
+.submit {
   background-color: hsl(33, 2, 68);
   border: none;
   box-shadow: 2px 2px 2px hsl(33, 0, 68);
@@ -37,7 +37,7 @@ textarea {
   width: 200px;
 
 }
-button {
+.submit {
   align-self: flex-start;
   text-align: center;
 }

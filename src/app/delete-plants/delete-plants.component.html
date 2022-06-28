@@ -1,21 +1,32 @@
 <div id="delete-plant">
   <img src="https://i.postimg.cc/hGHYLvnN/edit.png" alt="">
+
+  <div *ngIf="selectedPlant">
+    <br />
+    <h3>{{ selectedPlant.name }}</h3>
+    <img src="{{selectedPlant.imageUrl}}"
+    alt="{{selectedPlant.name}}"/>
+    <p>{{ selectedPlant.description }}</p>
+    <br />
+  </div>
+
   <div id="list">
     <ul class="plants">
-      <li *ngFor="let plant of plants">
-        <a routerLink="/detail/{{ plant.id }}">
-          <span class="badge">{{ plant.name }}</span><img src="{{plant.imageUrl}}"/>
-        </a>
+  <div *ngFor="let plant of plants">
+    <p (click)="onSelect(plant)" style="cursor: pointer">
+      {{ plant.name }}
+    </p>
+    <a [routerLink]="['/detail', plant.id]">Edit</a>
+    <br/>
+    <button
+    class="delete"
+    title="delete plant">
+      <span class="material-icons" (click)="onDelete()">delete</span>
 
-        <button
-        class="delete"
-        title="delete plant">
-          <span class="material-icons" (click)="delete(plant)">delete</span>
+    </button>
+  </div>
+</ul>
 
-        </button>
-
-      </li>
-    </ul>
   </div>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">

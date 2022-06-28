@@ -13,9 +13,10 @@ export class MyGardenComponent implements OnInit {
   plants: Plant[] = [];
 
   constructor(private plantService: PlantService) {}
-  ngOnInit(): void {
+  ngOnInit() {
+this.plantService.getPlants().subscribe(response=>{
+  this.plants=response.plants
 
-
-  }
+  })
 }
-
+}

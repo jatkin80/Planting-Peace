@@ -3,7 +3,7 @@
 
   <form #plantForm="ngForm" class="plantForm" (ngSubmit)="addPlant(plantForm.value)">
 
-    <!-- <input type="hidden" id="id" [(ngModel)]="id" name="id" /> -->
+    <input type="hidden" id="id" [(ngModel)]="id" name="id" />
 
     <label for="name"> Name: </label>
     <input id="name" [(ngModel)]="name" name="name" />

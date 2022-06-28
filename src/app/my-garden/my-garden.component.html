@@ -8,8 +8,9 @@
 <mat-list role="plant list">
 
   <mat-list>
-
-    <mat-list-item *ngFor="let plant of plants">
+    <a *ngFor="let plant of plants"
+    routerLink='/detail/{{plant.id}}'>
+    <mat-list-item>
       <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title>{{plant.name}}</mat-card-title>
@@ -24,6 +25,6 @@
       </mat-card-content>
     </mat-card>
     </mat-list-item>
-
+</a>
  </mat-list>
 

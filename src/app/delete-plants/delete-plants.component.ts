@@ -1,25 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { Plant } from '../models/Plant';
 import { PlantService } from '../plant.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-delete-plants',
   templateUrl: './delete-plants.component.html',
   styleUrls: ['./delete-plants.component.scss']
 })
-export class DeletePlantsComponent implements OnInit {  plants: Plant[]=[];
+export class DeletePlantsComponent implements OnInit {
+  selectedPlant?:any;
+  plants!:Plant[];
+  id:string="";
+  name:string="";
+  router: Router;
 
-  constructor(private plantService: PlantService){}
-  ngOnInit(): void {
-   this.getPlants()
-
+  constructor(private plantService: PlantService, private route: ActivatedRoute, router: Router){
+    this.router=router;
   }
-  getPlants():void {
 
-    }
+  ngOnInit():void {
+    this.id = this.route.snapshot.paramMap.get("id") || ""
 
-    delete(plant: Plant): void {
-      this.plants = this.plants.filter(p => p !== plant);
-      this.plantService.deletePlant(plant.id).subscribe();
-    }
+    this.plantService.getPlants().subscribe(response=>{
+      this.plants=response.plants;
+      this.selectedPlant=this.plants.find(plant=>plant.id===+this.id)
+
+      })
 }
+  onSelect(plant:any): void {
+    this.selectedPlant=plant;
+    }
+    onDelete() {
+this.plantService.deletePlant(+this.id);
+this.router.navigate(['/plants']).then(()=>{window.location.reload()})
+    }
+    }

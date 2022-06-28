@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MessagesComponent } from '../messages/messages.component';
 import { Plant, PlantResponse, PlantsResponse } from '../models/Plant';
 import { PlantService } from '../plant.service';
+import {Router} from'@angular/router'
 ;
 @Component({
   selector: 'app-add-plant',
@@ -10,6 +11,7 @@ import { PlantService } from '../plant.service';
 })
 export class AddPlantComponent implements OnInit {
   plants: Plant[]=[];
+  @Input()  id!: number;
   @Input()  name!: string;
   @Input()  description!: string;
   @Input()  imageUrl!:string;
@@ -20,7 +22,7 @@ export class AddPlantComponent implements OnInit {
   @Input()spacing!: number;
 
 
-  constructor(private plantService: PlantService){}
+  constructor(private plantService: PlantService, private router: Router){}
   ngOnInit() {
 this.plantService.getPlants().subscribe(response=>
       {this.plants=response.plants
@@ -34,4 +36,5 @@ this.plantService.addPlant(newPlant).subscribe(response=>{
 
   }
 
-  }
+    }
+

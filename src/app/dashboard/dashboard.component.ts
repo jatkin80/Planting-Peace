@@ -21,7 +21,12 @@ export class DashboardComponent implements OnInit {
   @Input()  daystomaturity!: number;
   @Input() spacing!: number;
   selectedPlant?:any;
-  constructor(private plantService:PlantService, router:Router) { }
+router: Router;
+location: string="";
+
+  constructor(private plantService:PlantService, router:Router) {
+    this.router=router;
+   }
 
   ngOnInit() {
     this.plantService.getPlants().subscribe(response =>{
@@ -32,5 +37,10 @@ export class DashboardComponent implements OnInit {
 }
 onSelect(plant:any):void {
   this.selectedPlant=plant;
+  }
+
+  onDelete(plant: any): void{
+this.plantService.deletePlant(+this.id);
+this.router.navigate(['/plants']).then(()=>{window.location.reload()})
   }
 }
